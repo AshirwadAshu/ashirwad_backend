@@ -1,7 +1,5 @@
 package com.excel.lms.entity;
 
-import org.hibernate.bytecode.internal.bytebuddy.PrivateAccessorException;
-
 import com.excel.lms.enums.AccountType;
 
 import jakarta.persistence.Entity;
@@ -10,7 +8,6 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -29,18 +26,18 @@ import lombok.Setter;
 public class BankDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer BankDetailsId ;
+	private Integer BankDetailsId;
+
+	private String accountNo;
+	private String bankName;
 	
 	@Enumerated(EnumType.STRING)
-	private AccountType accountNo;
-	
-	private String bankName;
-	private String accountType;
+	private AccountType accountType;
 	private String IFSCcode;
 	private String branch;
 	private String state;
-	
+
 	@OneToOne
-	private EmployeePrimaryInfo employeePrimaryInfo; 
+	private EmployeePrimaryInfo employeePrimaryInfo;
 
 }

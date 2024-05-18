@@ -1,5 +1,6 @@
 package com.excel.lms.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,6 +35,6 @@ public class AddressDetails {
 	private String pincode;
 	private String landmark;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private EmployeePrimaryInfo employeePrimaryInfo;
 }

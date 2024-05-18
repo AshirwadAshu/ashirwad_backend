@@ -35,7 +35,7 @@ public class EmployeePrimaryInfoDto {
 
 	private Integer primaryId;
 
-	private String employeeid;
+	private String employeeId;
 	private String employeeName;
 	private LocalDate dateOfJoing;
 	private LocalDate dateOfbirth;

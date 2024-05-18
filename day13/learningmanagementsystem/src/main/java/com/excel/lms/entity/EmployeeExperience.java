@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import com.excel.lms.enums.Designation;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -32,15 +33,13 @@ public class EmployeeExperience {
 	private Integer EmployeeExperienceId ;
 	
 	private String companyName;
-	private Integer yearOfexperience;
+	private String yearOfexperience;
 	private LocalDate dateOfJoing;
 	private LocalDate dateOfReliving;
-	
 	@Enumerated(EnumType.STRING)
 	private Designation desgnation;
-	
 	private String location;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private EmployeePrimaryInfo employeePrimaryInfo; 
 }

@@ -2,6 +2,7 @@ package com.excel.lms.entity;
 
 import com.excel.lms.enums.Education;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -39,7 +40,7 @@ public class EducationDetails {
 	private String specialization;
 	private String state;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private EmployeePrimaryInfo employeePrimaryInfo;
 
 }

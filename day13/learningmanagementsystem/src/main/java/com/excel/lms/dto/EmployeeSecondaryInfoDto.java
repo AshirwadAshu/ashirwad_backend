@@ -40,7 +40,8 @@ import lombok.Setter;
 @Builder
 public class EmployeeSecondaryInfoDto {
 	
-	private Integer SecondaryId ;
+	private String employeeId;
+	
 	private String panNo;
 	private String aadharNo;
 	private String fatherName;
@@ -51,6 +52,6 @@ public class EmployeeSecondaryInfoDto {
 
 	private MaritalStatus maritalStatus;
 	
-	
+	@OneToOne
 	private EmployeePrimaryInfo employeePrimaryInfo;
 }

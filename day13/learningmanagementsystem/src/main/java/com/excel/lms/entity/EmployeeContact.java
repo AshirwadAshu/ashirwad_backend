@@ -1,7 +1,5 @@
 package com.excel.lms.entity;
 
-import java.time.LocalDate;
-
 import com.excel.lms.enums.ContactType;
 
 import jakarta.persistence.Entity;
@@ -29,10 +27,8 @@ public class EmployeeContact {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer contactId ;
-	
 	@Enumerated(EnumType.STRING)
 	private ContactType contactType;
-	
 	private String contactNo;
 	
 	@ManyToOne
