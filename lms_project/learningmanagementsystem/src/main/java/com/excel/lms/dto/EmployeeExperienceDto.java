@@ -27,8 +27,8 @@ import lombok.Setter;
 @Builder
 public class EmployeeExperienceDto {
 
-	private Integer EmployeeExperienceId ;
-	
+	private Integer employeeExperienceId ;
+	private String employeeId;
 	private String companyName;
 	private String yearOfexperience;
 	private LocalDate dateOfJoing;
@@ -39,6 +39,4 @@ public class EmployeeExperienceDto {
 	
 	private String location;
 	
-
-	private EmployeePrimaryInfo employeePrimaryInfo; 
 }

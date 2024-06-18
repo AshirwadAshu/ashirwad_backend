@@ -21,8 +21,9 @@ import lombok.Setter;
 @Builder
 public class AddressDetailsDto {
 	
-	private Integer  AddressDetailsId ;
+	private Integer  addressDetailsId ;
 	
+	private String employeeId;
 	private String addressType;
 	private String doorNo;
 	private String street;
@@ -31,5 +32,5 @@ public class AddressDetailsDto {
 	private String state;
 	private String pincode;
 	private String landmark;
-	private EmployeePrimaryInfo employeePrimaryInfo;
+	
 }

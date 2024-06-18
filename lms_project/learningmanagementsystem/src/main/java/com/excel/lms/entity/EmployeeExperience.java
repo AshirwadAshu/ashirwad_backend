@@ -30,7 +30,7 @@ public class EmployeeExperience {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer EmployeeExperienceId ;
+	private Integer employeeExperienceId ;
 	
 	private String companyName;
 	private String yearOfexperience;
@@ -40,6 +40,6 @@ public class EmployeeExperience {
 	private Designation desgnation;
 	private String location;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH)
 	private EmployeePrimaryInfo employeePrimaryInfo; 
 }

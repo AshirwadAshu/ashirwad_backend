@@ -6,6 +6,7 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -26,9 +27,10 @@ import lombok.Setter;
 @Table(name = "employee_education_info")
 public class EducationDetails {
 	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer EducationDetailsId ;
+	private Integer educationDetailsId ;
 	
 	@Enumerated(EnumType.STRING)
 	private Education educationType;
@@ -40,7 +42,7 @@ public class EducationDetails {
 	private String specialization;
 	private String state;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH,fetch = FetchType.LAZY)
 	private EmployeePrimaryInfo employeePrimaryInfo;
 
 }

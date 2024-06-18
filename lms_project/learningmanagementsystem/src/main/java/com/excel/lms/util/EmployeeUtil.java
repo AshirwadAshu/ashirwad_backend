@@ -32,6 +32,7 @@ public class EmployeeUtil {
 
 	public static EmployeePrimaryInfo dtoToEntity(EmployeePrimaryInfoDto employee) {
 		return EmployeePrimaryInfo.builder().employeeId(employee.getEmployeeId())
+				.primaryId(employee.getPrimaryId())
 				.employeeName(employee.getEmployeeName())
 				.dateOfbirth(employee.getDateOfbirth())
 				.dateOfJoing(employee.getDateOfJoing())
@@ -39,6 +40,7 @@ public class EmployeeUtil {
 				.bloodGroup(employee.getBloodGroup())
 				.designation(employee.getDesignation())
 				.gender(employee.getGender())
+				.nationality(employee.getNationality())
 				.employeeStatus(employee.getEmployeeStatus())
 				.build();
 	}
@@ -52,6 +54,7 @@ public class EmployeeUtil {
 				.motherName(employee.getMotherName())
 				.spouseName(employee.getSpouseName())
 				.pasportNo(employee.getPasportNo())
+				.maritalStatus(employee.getMaritalStatus())
 				
 				.build();
 	}
@@ -59,10 +62,11 @@ public class EmployeeUtil {
 	
 	public static BankDetails dtoToEntity(BankDetailsDto employee) {
 		return BankDetails.builder()
+		.bankDetailsId(employee.getBankDetailsId())	
 		 .accountNo(employee.getAccountNo())
 		.bankName(employee.getBankName())
 		.accountType(employee.getAccountType())
-		.ifscCode(employee.getIFSCcode())
+		.ifscCode(employee.getIfscCode())
 		.branch(employee.getBranch())
 		.state(employee.getState())
 		        
@@ -85,21 +89,21 @@ public class EmployeeUtil {
 	}
 	
 	
-	public static List<AddressDetails> addressToEntity(List<AddressDetailsDto> address)
-	{
-		return address.stream()
-	    		.map(x -> AddressDetails.builder()
-	    		.addressType(x.getAddressType())
-	    		.doorNo(x.getDoorNo())
-	    		.street(x.getStreet())
-	    		.locality(x.getLocality())
-	    		.city(x.getCity())
-	    		.state(x.getState())
-	    		.pincode(x.getPincode())
-	    		.landmark(x.getLandmark())	
-	            .build())
-	            .collect(Collectors.toList());
-	}
+//	public static List<AddressDetails> addressToEntity(List<AddressDetailsDto> address)
+//	{
+//		return address.stream()
+//	    		.map(x -> AddressDetails.builder()
+//	    		.addressType(x.getAddressType())
+//	    		.doorNo(x.getDoorNo())
+//	    		.street(x.getStreet())
+//	    		.locality(x.getLocality())
+//	    		.city(x.getCity())
+//	    		.state(x.getState())
+//	    		.pincode(x.getPincode())
+//	    		.landmark(x.getLandmark())	
+//	            .build())
+//	            .collect(Collectors.toList());
+//	}
 	
 	public static List<EmployeeExperience> experienceToEntity(List<EmployeeExperienceDto> experience)
 	{
@@ -136,6 +140,24 @@ public class EmployeeUtil {
 				.build();
 		
 	}
+
+//	public static List<AddressDetailsDto> entityToAddressDto(List<AddressDetails> adressDetails) {
+//		
+//		return adressDetails.stream()
+//	    		.map(x -> AddressDetailsDto.builder()
+//	    				.employeeId(x.getEmployeePrimaryInfo().getEmployeeId())	
+//	    		.addressType(x.getAddressType())
+//	    		.doorNo(x.getDoorNo())
+//	    		.street(x.getStreet())
+//	    		.locality(x.getLocality())
+//	    		.city(x.getCity())
+//	    		.state(x.getState())
+//	    		.pincode(x.getPincode())
+//	    		.landmark(x.getLandmark())	
+//	            .build())
+//	            .collect(Collectors.toList());
+//	}
+	
 	
 	
 }

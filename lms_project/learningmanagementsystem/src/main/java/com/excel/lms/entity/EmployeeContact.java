@@ -2,6 +2,7 @@ package com.excel.lms.entity;
 
 import com.excel.lms.enums.ContactType;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -31,7 +32,7 @@ public class EmployeeContact {
 	private ContactType contactType;
 	private String contactNo;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH)
 	private EmployeePrimaryInfo employeePrimaryInfo; 
 
 }

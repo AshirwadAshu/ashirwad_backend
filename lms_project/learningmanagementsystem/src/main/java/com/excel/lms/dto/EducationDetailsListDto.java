@@ -20,7 +20,7 @@ import lombok.Setter;
 public class EducationDetailsListDto {
 	
 	
-	private String EmployeeId;
+	private String employeeId;
 	
 	private List<EducationDetailsDto>educations;
 

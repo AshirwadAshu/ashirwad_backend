@@ -24,7 +24,7 @@ public class AddressDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer  AddressDetailsId ;
+	private Integer  addressDetailsId ;
 	
 	private String addressType;
 	private String doorNo;
@@ -35,6 +35,6 @@ public class AddressDetails {
 	private String pincode;
 	private String landmark;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH)
 	private EmployeePrimaryInfo employeePrimaryInfo;
 }

@@ -24,6 +24,6 @@ public class TechnicalSkillsDto {
 	private Integer yearOfexperience;
 	
 	
-	private List<EmployeePrimaryInfo>employeePrimaryInfos;
+
 
 }

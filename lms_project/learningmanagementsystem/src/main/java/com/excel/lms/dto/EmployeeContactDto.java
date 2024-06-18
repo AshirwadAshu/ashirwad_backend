@@ -23,14 +23,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @Builder
 public class EmployeeContactDto {
+	private String employeeId;
+	
 	
 	private Integer contactId ;
-	
-
 	private ContactType contactType;
-	
 	private String contactNo;
 	
 
-	private EmployeePrimaryInfo employeePrimaryInfo; 
+	
 }

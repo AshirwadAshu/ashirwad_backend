@@ -41,16 +41,15 @@ import lombok.Setter;
 public class EmployeeSecondaryInfoDto {
 	
 	private String employeeId;
-	
+	private Integer  secondaryId ;
 	private String panNo;
 	private String aadharNo;
 	private String fatherName;
 	private String motherName;
 	private String spouseName;
 	private String pasportNo;
-	
-
 	private MaritalStatus maritalStatus;
+	
 	
 	@OneToOne
 	private EmployeePrimaryInfo employeePrimaryInfo;

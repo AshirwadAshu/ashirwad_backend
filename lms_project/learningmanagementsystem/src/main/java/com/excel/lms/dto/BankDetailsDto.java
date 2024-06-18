@@ -24,14 +24,14 @@ import lombok.Setter;
 @Builder
 public class BankDetailsDto {
 
-	private Integer BankDetailsId ;
+	private Integer bankDetailsId ;
 	private String employeeId;
   
 	private String accountNo;
 	
 	private String bankName;
 	private AccountType accountType;
-	private String IFSCcode;
+	private String ifscCode;
 	private String branch;
 	private String state;
 	

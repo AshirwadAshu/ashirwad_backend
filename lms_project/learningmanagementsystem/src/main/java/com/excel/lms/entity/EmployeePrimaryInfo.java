@@ -53,19 +53,19 @@ public class EmployeePrimaryInfo {
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfo")
 	private EmployeeSecondaryInfo employeeSecondaryInfo;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfo")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH, mappedBy = "employeePrimaryInfo")
 	private List<AddressDetails> addressDetails;
 
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfo")
 	private BankDetails bankDetails;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfo")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH, mappedBy = "employeePrimaryInfo")
 	private List<EducationDetails> educationDetails;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfo")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH, mappedBy = "employeePrimaryInfo")
 	private List<EmployeeContact> employeeContacts;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfo")
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE.PERSIST.DETACH.REFRESH, mappedBy = "employeePrimaryInfo")
 	private List<EmployeeExperience> employeeExperience;
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "employeePrimaryInfos")
